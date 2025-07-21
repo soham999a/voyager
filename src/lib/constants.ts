@@ -98,6 +98,8 @@ export const MODULES = {
   SETTINGS: 'settings'
 } as const;
 
+export type ModuleType = typeof MODULES[keyof typeof MODULES];
+
 // Default Permissions by Role
 export const DEFAULT_PERMISSIONS = {
   [USER_ROLES.COMMANDER]: {

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDashboardStore } from '@/store/dashboardStore';
-import { MODULES } from '@/lib/constants';
+import { MODULES, type ModuleType } from '@/lib/constants';
 
 // Import dashboard modules
 import Sidebar from './Sidebar';
@@ -21,7 +21,7 @@ import Settings from './modules/Settings';
 import SystemAlerts from './SystemAlerts';
 
 const CommandDashboard = () => {
-  const [activeModule, setActiveModule] = useState(MODULES.COMMAND_CENTER);
+  const [activeModule, setActiveModule] = useState<ModuleType>(MODULES.COMMAND_CENTER);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const user = useDashboardStore((state) => state.user);
   const modulePermissions = useDashboardStore((state) => state.modulePermissions);

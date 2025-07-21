@@ -285,9 +285,9 @@ export default function BookingFlow() {
                         <h4 className="font-semibold text-white mb-3">Suite Selection</h4>
                         {getSelectedSuite() && (
                           <div>
-                            <p className="text-cyan-400 font-semibold">{getSelectedSuite().name}</p>
-                            <p className="text-gray-300 text-sm">{getSelectedSuite().description}</p>
-                            <p className="text-purple-400 font-bold mt-2">${getSelectedSuite().price.toLocaleString()}</p>
+                            <p className="text-cyan-400 font-semibold">{getSelectedSuite()!.name}</p>
+                            <p className="text-gray-300 text-sm">{getSelectedSuite()!.description}</p>
+                            <p className="text-purple-400 font-bold mt-2">${getSelectedSuite()!.price.toLocaleString()}</p>
                           </div>
                         )}
                       </div>
